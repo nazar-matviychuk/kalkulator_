@@ -30,7 +30,7 @@ body {
 .skip_btn,
 .stop_btn {
     border: 1px solid rgb(0, 173, 32);
-    border-radius: 5px;
+    border-radius: 10px;
 
     height: 40px;
     padding: 40px;
