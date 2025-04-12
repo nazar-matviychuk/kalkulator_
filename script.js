@@ -30,7 +30,7 @@ for (let i = 0; i < cookies.length; i += 1) {
     if (name_value[0].includes('cPoints')) {
         isCookies = true;
         cPoints = name_value[1];
-        result_field.innerHTML = `result of last game:${cPoints} is right`;
+        result_field.innerHTML = `результат минулої гри:${cPoints} правильно`;
     }
 }
 
@@ -113,7 +113,7 @@ function changeTime() {
 function displayResult() {
     start_page.style.display = 'flex';
     main_page.style.display = 'none';
-    result_field.innerHTML = `result of last game:${points} is right, your accuracy is ${Math.round(points * 100 / total_question_count)}%, you skip ${skips} questions`;
+    result_field.innerHTML = `результат минулої гри:${points} правильно, твій відсоток правильних відповідей ${Math.round(points * 100 / total_question_count)}%, пропущенно ${skips} запитань`;
     document.cookie = `cPoints=${points};max-age=${31536000000} `;
 }
 
