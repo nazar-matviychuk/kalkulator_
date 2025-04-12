@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap');
 
 .colority {
-    background-color: rgba(0, 0, 0, 0);
+    background-color: rgba(204, 153, 255);
 }
 
 .sofia-sans-condensed-<uniquifier> {
@@ -17,7 +17,7 @@ body {
     background-repeat: repeat;
     background-size: cover;
     font-family: "courier new";
-    color: rgb(204, 153, 255);
+    color: rgb(256, 256, 256);
     background-color: black;
 }
 
