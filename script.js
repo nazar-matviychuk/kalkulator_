@@ -146,23 +146,23 @@ start_btn.addEventListener('click', function () {
     for (let i = 0; i < answer_btn.length; i += 1) {
         answer_btn[i].addEventListener('click', function () {
             total_question_count += 1;
+        
+            // Зелений, якщо правильно — червоний, якщо ні
             if (answer_btn[i].innerHTML == current_question.correct) {
                 points += 1;
-                answer_btn[i].style.background = 'rgb(0, 173, 32)';
+                answer_btn[i].style.background = 'rgb(40, 205, 40)'; // зелений
             } else {
-                answer_btn[i].style.background = 'rgb(134, 0, 0)';
+                answer_btn[i].style.background = 'rgb(134, 0, 0)'; // червоний
             }
-            anime({
-                targets: answer_btn[i],
-                background: 'rgb(0, 78, 14)',
-                delay: 200,
-                duration: 500,
-                easing: 'linear'
-            }).finished.then(function () {
+        
+            // Через 200 мс скидаємо колір і показуємо нове питання
+            setTimeout(() => {
+                answer_btn[i].style.background = ''; // Повертаємо до початкового кольору
                 current_question = new Question();
                 current_question.display();
-            });
+            }, 750);
         });
+        
     }
 
     // Додавання обробника події для кнопки "skip"
@@ -172,7 +172,6 @@ start_btn.addEventListener('click', function () {
         console.log('skip');
         anime({
             targets: skip_btn,
-            background: 'rgb(0, 78, 14)',
             delay: 200,
             duration: 500,
             easing: 'linear'
@@ -187,7 +186,6 @@ start_btn.addEventListener('click', function () {
         timer.innerHTML = 0;
         anime({
             targets: stop_btn,
-            background: 'rgb(0, 78, 14)',
             delay: 200,
             duration: 500,
             easing: 'linear'
